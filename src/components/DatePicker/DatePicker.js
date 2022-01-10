@@ -12,6 +12,7 @@ export default function DatePicker() {
   const dateHandler = (e) => {
     let date = e.target.value;
     navigate(`/apods/${date}`);
+    window.location.reload();
   };
 
   return (

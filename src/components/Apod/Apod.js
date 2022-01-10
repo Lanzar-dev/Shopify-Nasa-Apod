@@ -37,7 +37,14 @@ export default function Apod() {
     );
   }
   if (error) {
-    return <div>Something went wrong, Pick a valid date</div>;
+    return (
+      <div>
+        <h3>
+          Welcome to Nasa Astromical picture of the day, Select a date to see
+          the picture of the day
+        </h3>
+      </div>
+    );
   }
 
   return (
