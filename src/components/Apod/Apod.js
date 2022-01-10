@@ -29,26 +29,32 @@ export default function Apod() {
     fetchData();
   }, [date]);
 
-  console.log(data);
-
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <p>Loading...</p>
+      </div>
+    );
   }
   if (error) {
-    return <div>Error!</div>;
+    return <div>Something went wrong, Pick a valid date</div>;
   }
 
   return (
-    <article>
-      <h3>{data.title}</h3>
-      <p>
-        <em>{data.copyright}</em>
-      </p>
-      <figure>
-        <img src={data.url} alt={data.title} />
-        <figcaption>{data.title}</figcaption>
-      </figure>
-      <p>{data.date}</p>
+    <article className="apod">
+      <div className="titleCopyright">
+        <h1>{data.title}</h1>
+        <p>
+          <em>{data.copyright}</em>
+        </p>
+      </div>
+
+      <img src={data.url} alt={data.title} />
+      <div className="titleDate">
+        <h3>{data.title} -</h3>
+
+        <p>{data.date}</p>
+      </div>
       <p>{data.explanation}</p>
     </article>
   );

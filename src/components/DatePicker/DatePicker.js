@@ -10,12 +10,12 @@ export default function DatePicker() {
   const minDate = moment("1995-06-16").format("YYYY-MM-DD");
 
   const dateHandler = (e) => {
-    const newDate = e.target.value;
-    navigate(`/apods/${newDate}`);
+    let date = e.target.value;
+    navigate(`/apods/${date}`);
   };
 
   return (
-    <article>
+    <article className="datePicker">
       <div>
         <label htmlFor="date">Date:</label>
         <input
