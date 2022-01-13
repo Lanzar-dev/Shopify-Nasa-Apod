@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 const API_KEY = "Njhczoe9ZGn6HVEHUmAYZQut3tFuWthhHe7xQ79B";
 
 export default function Apod() {
@@ -10,6 +11,8 @@ export default function Apod() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [like, setLike] = useState(24);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,6 +31,11 @@ export default function Apod() {
     };
     fetchData();
   }, [date]);
+
+  const handleLike = () => {
+    setLike(isLiked ? like + 1 : like - 1);
+    setIsLiked(!isLiked);
+  };
 
   if (loading) {
     return (
@@ -63,6 +71,21 @@ export default function Apod() {
         <p>{data.date}</p>
       </div>
       <p>{data.explanation}</p>
+
+      <div className="bottomLike">
+        <span className="like" onClick={handleLike}>
+          {isLiked ? (
+            <>
+              <FavoriteBorderIcon className="likeIcon" /> {like}
+            </>
+          ) : (
+            <>
+              <FavoriteIcon className="likeIcon" style={{ color: "red" }} />{" "}
+              {like}
+            </>
+          )}
+        </span>
+      </div>
     </article>
   );
 }
