@@ -40,8 +40,8 @@ export default function Apod() {
     return (
       <div>
         <h2>
-          Welcome to Nasa Astromical picture of the day, Select a date to see
-          the picture of the day
+          Welcome to Nasa Astronomy Picture of the Day, Select a date to see the
+          picture of the day
         </h2>
       </div>
     );
