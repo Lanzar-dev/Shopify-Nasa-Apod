@@ -84,6 +84,7 @@ h3 {
 
 .apod .explanation {
   text-align: justify;
+  line-height: 24px;
 }
 
 .bottomLike {
@@ -101,6 +102,7 @@ h3 {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .likeIcon {
