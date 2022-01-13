@@ -31,7 +31,7 @@ main {
 
 /* Date Picker */
 .datePicker {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .datePicker label {
@@ -55,7 +55,7 @@ main {
 }
 
 .titleCopyright {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .titleCopyright p {
@@ -94,10 +94,6 @@ h3 {
     border-radius: 10px;
   }
 
-  .datePicker label {
-    font-size: 18px;
-  }
-
   h1 {
     font-size: 20px;
   }
@@ -117,11 +113,11 @@ h3 {
 
 @media only screen and (max-width: 600px) {
   .datePicker label {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .titleCopyright p {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   img {
@@ -153,7 +149,7 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 350px) {
   h1 {
     font-size: 15px;
   }

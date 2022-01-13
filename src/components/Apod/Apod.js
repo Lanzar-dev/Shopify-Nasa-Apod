@@ -39,10 +39,10 @@ export default function Apod() {
   if (error) {
     return (
       <div>
-        <h3>
+        <h2>
           Welcome to Nasa Astromical picture of the day, Select a date to see
           the picture of the day
-        </h3>
+        </h2>
       </div>
     );
   }
