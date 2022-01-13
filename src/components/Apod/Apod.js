@@ -33,7 +33,7 @@ export default function Apod() {
   }, [date]);
 
   const handleLike = () => {
-    setLike(isLiked ? like + 1 : like - 1);
+    setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
   };
 
@@ -76,12 +76,12 @@ export default function Apod() {
         <span className="like" onClick={handleLike}>
           {isLiked ? (
             <>
-              <FavoriteBorderIcon className="likeIcon" /> {like}
+              <FavoriteIcon className="likeIcon" style={{ color: "red" }} />{" "}
+              {like}
             </>
           ) : (
             <>
-              <FavoriteIcon className="likeIcon" style={{ color: "red" }} />{" "}
-              {like}
+              <FavoriteBorderIcon className="likeIcon" /> {like}
             </>
           )}
         </span>
