@@ -70,7 +70,9 @@ export default function Apod() {
 
         <p>{data.date}</p>
       </div>
-      <p>{data.explanation}</p>
+      <div className="explanation">
+        <p>{data.explanation}</p>
+      </div>
 
       <div className="bottomLike">
         <span className="like" onClick={handleLike}>

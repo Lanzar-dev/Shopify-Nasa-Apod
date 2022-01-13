@@ -82,7 +82,7 @@ h3 {
   margin-right: 10px;
 }
 
-.apod p:last-child {
+.apod .explanation {
   text-align: justify;
 }
 
@@ -153,6 +153,10 @@ h3 {
 }
 
 @media only screen and (max-width: 450px) {
+  main {
+    padding: 15px;
+  }
+
   h1 {
     font-size: 20px;
   }
